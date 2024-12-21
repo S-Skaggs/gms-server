@@ -3,7 +3,7 @@ const { Garden, Counter } = require('../../src/models/garden');
 
 // Connect to a test database
 beforeAll(async () => {
-  const connectionString = ProcessingInstruction.env.DB_CONN || 'mongodb+srv://gms_user:s3cret@bellevueuniversity.y1mkstf.mongodb.net/?retryWrites=true&w=majority&appName=BellevueUniversity';
+  const connectionString = process.env.DB_CONN || 'mongodb+srv://gms_user:s3cret@bellevueuniversity.y1mkstf.mongodb.net/?retryWrites=true&w=majority&appName=BellevueUniversity';
   try {
     await mongoose.connect(connectionString, {
       dbName: 'gms'
